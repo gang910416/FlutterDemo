@@ -125,6 +125,7 @@ class _MyListViewState extends State<MyHomePage>{
                       Navigator.push(context,
                         MaterialPageRoute(builder: (context){
                           //这里用来跳转到其他页面
+                          //这里用来跳转到其他页面
                           if (func["name"] == "基础组件"){
                             return HomeListDetail(title: "组件",);
                           }else if (func["name"] == "Text"){
@@ -133,6 +134,8 @@ class _MyListViewState extends State<MyHomePage>{
                             return Flutter_image();
                           }else if (func["name"] == "Layout"){
                             return RowAndColum();
+                          }else if(func["name"] == "路由表封装"){
+                            return FlutterRoutes();
                           }
                         }),);
 
