@@ -12,8 +12,10 @@ import 'Flutter_Tabbar.dart';
 import 'Flutter_Routes.dart';
 
 class HomeListDetail extends StatefulWidget{
-  HomeListDetail({Key key,this.title}):super(key: key);
-  final String title;
+  final func;
+  const HomeListDetail({Key key, @required this.func}) : super(key: key);
+
+  @override
   _MyDetailVc createState() => _MyDetailVc();
 }
 
@@ -29,7 +31,7 @@ class _MyDetailVc extends State<HomeListDetail>{
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title,style: TextStyle(
+        title: Text('组件详解',style: TextStyle(
           color: Colors.white,
         ),),
         leading: new IconButton(icon: Icon(Icons.arrow_back_ios), onPressed: (){

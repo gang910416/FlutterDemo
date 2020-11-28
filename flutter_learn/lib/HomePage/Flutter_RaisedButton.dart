@@ -35,6 +35,13 @@ class _buttonWidget extends State<ButtonWidget>{
     );
   }
 
+  //FlatButton
+  FlatButton namolFlatBtn(){
+
+
+  }
+
+  // RaisedButton
   RaisedButton _button(){
     return RaisedButton(
       color: Colors.grey,

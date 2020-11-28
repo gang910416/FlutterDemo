@@ -47,7 +47,6 @@ class pageA extends State<FlutterRoutes>{
   }
 }
 
-
 class pageB extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
