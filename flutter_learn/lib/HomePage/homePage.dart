@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learn/HomePage/Flutter_AlertView.dart';
+import 'package:flutter_learn/HomePage/Flutter_DataTable.dart';
+import 'package:flutter_learn/HomePage/Flutter_DatePicker.dart';
 import 'package:flutter_learn/HomePage/Flutter_InputDecoration.dart';
+import 'package:flutter_learn/HomePage/Flutter_Tooltip.dart';
 import 'home_detailVc.dart';
 import 'package:flutter_learn/HomePage/Flutter_Routes.dart';
 import 'package:flutter_learn/HomePage/Flutter_Scaffold.dart';
@@ -13,6 +17,14 @@ import 'Flutter_Tabbar.dart';
 import 'Flutter_Routes.dart';
 import 'Flutter_InputDecoration.dart';
 import 'package:flutter_learn/FMRouteManager.dart';
+import 'Flutter_CheckBox.dart';
+import 'Flutter_switch.dart';
+import 'Flutter_Slider.dart';
+import 'Flutter_DatePicker.dart';
+import 'Flutter_AlertView.dart';
+import 'Flutter_bottomSheet.dart';
+import 'Flutter_Tooltip.dart';
+
 class MyHomePage extends StatefulWidget{
   final func;
    const MyHomePage({Key key, @required this.func}):super(key: key);
@@ -77,22 +89,21 @@ class _MyListViewState extends State<MyHomePage>{
   void initData(){
     funcLists.add({"name": "基础组件", "action": "/BaseWidgets/Row","desc": "在构建您的第一个Flutter应用程序之前，您绝对需要了解这些widget。"});
     funcLists.add({"name": "InputDecoration 文本输入", "action": "/BaseWidgets/Row", "desc": "Flutter 组件之 InputDecoration 详解"});
-    funcLists.add({"name": "Cupertino(iOS风格的widget)", "action": "/BaseWidgets/Row", "desc": "用于当前iOS设计语言的美丽和高保真widget。"});
+    funcLists.add({"name": "CheckBox", "action": "/BaseWidgets/Row", "desc": "Flutter 组件之 CheckBox 详解"});
     funcLists.add({"name": "Layout", "action": "/BaseWidgets/Row","desc": "排列其它widget的columns、rows、grids和其它的layouts。"});
     funcLists.add({"name": "Text", "action": "/BaseWidgets/Row", "desc": "文本显示和样式。"});
     funcLists.add({"name": "Assets、图片、Icons", "action": "/BaseWidgets/Row" ,"desc": "管理assets, 显示图片和Icon。"});
-    funcLists.add({"name": "Input", "action": "/BaseWidgets/Row", "desc": "Material Components 和 Cupertino中获取用户输入的widget。"});
-    funcLists.add({"name": "动画和Motion", "action": "/BaseWidgets/Row", "desc": "在您的应用中使用动画。查看Flutter中的动画总览。"});
-    funcLists.add({"name": "交互模型", "action": "/BaseWidgets/Row", "desc": "响应触摸事件并将用户路由到不同的页面视图（View）。"});
-    funcLists.add({"name": "样式", "action": "/BaseWidgets/Row", "desc": "管理应用的主题，使应用能够响应式的适应屏幕尺寸或添加填充。"});
-    funcLists.add({"name": "绘制和效果", "action": "/BaseWidgets/Row", "desc": "Widget将视觉效果应用到其子组件，而不改变它们的布局、大小和位置。"});
-    funcLists.add({"name": "Async", "action": "/BaseWidgets/Row", "desc": "Flutter应用的异步模型。"});
-    funcLists.add({"name": "滚动", "action": "/BaseWidgets/Row", "desc": "滚动一个拥有多个子组件的父组件。"});
+    funcLists.add({"name": "switch 开关", "action": "/BaseWidgets/Row", "desc": "Flutter 组件之 Switch 详解"});
+    funcLists.add({"name": "Slider 进度条", "action": "/BaseWidgets/Row", "desc": "Flutter 组件之 Slider 详解"});
+    funcLists.add({"name": "DatePicker 时间选择器", "action": "/BaseWidgets/Row", "desc": "Flutter 组件之时间日期选择器（DatePicker，TimerPicker）详解"});
+    funcLists.add({"name": "弹窗", "action": "/BaseWidgets/Row", "desc": "Flutter 组件之 Dialog 弹框（Dialog，Alert）详解"});
+    funcLists.add({"name": "BottomSheet", "action": "/BaseWidgets/Row", "desc": "Flutter 组件之 BottomSheet 详解"});
+    funcLists.add({"name": "Tooltip", "action": "/BaseWidgets/Row", "desc": "Flutter 组件之 Tooltip 详解"});
+    funcLists.add({"name": "DataTable", "action": "/BaseWidgets/Row", "desc": "Flutter 组件之 DataTable 详解"});
     funcLists.add({"name": "辅助功能", "action": "/BaseWidgets/Row", "desc": "给你的App添加辅助功能(这是一个正在进行的工作)。"});
     setState(() {
       // 调用父类方法，会刷新页面
     });
-
   }
   @override
   Widget build(BuildContext context) {
@@ -130,7 +141,6 @@ class _MyListViewState extends State<MyHomePage>{
                       Navigator.push(context,
                         MaterialPageRoute(builder: (context){
                           //这里用来跳转到其他页面
-                          //这里用来跳转到其他页面
                           if (func["name"] == "基础组件"){
                             return HomeListDetail();
                           }else if (func["name"] == "Text"){
@@ -142,11 +152,27 @@ class _MyListViewState extends State<MyHomePage>{
                           }else if(func["name"] == "路由表封装"){
                             return FlutterRoutes();
                           }else if(func["name"] == "InputDecoration 文本输入"){
-                            return FlutterInput();
+                            return FMTextFieldVC();
+                          }else if(func["name"] == "CheckBox"){
+                            return CheckBoxVC();
+                          }else if(func["name"] == "switch 开关"){
+                            return FMSwitchVC();
+                          }else if(func["name"] == "Slider 进度条"){
+                            return FMSiderVC();
+                          }else if(func["name"] == "DatePicker 时间选择器"){
+                            return FMDatePicker();
+                            }else if(func["name"] == "弹窗"){
+                            return FLutterAlert();
+                          }else if(func["name"] == "BottomSheet" ){
+                            return FMBottomSheetVC();
+                          }else if(func["name"] == "Tooltip"){
+                            return FMToolTipVC();
+                          }else if(func["name"] == "DataTable"){
+                            return FMDataTableVC();
                           }
                         },
-                        ),);
-
+                        ),
+                      );
                   },
                 );
               },

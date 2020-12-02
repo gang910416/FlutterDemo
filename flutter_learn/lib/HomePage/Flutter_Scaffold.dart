@@ -154,7 +154,7 @@ List<Widget> _buttons(){
         });
       },
       currentIndex: _selectedIndex,
-      backgroundColor:Colors.grey,
+      backgroundColor:Colors.white,
       selectedFontSize:18,//选中时的文字大小
       iconSize: 30,//使用 iconSize 改变图标大小
       selectedLabelStyle: TextStyle(
@@ -162,9 +162,9 @@ List<Widget> _buttons(){
         fontSize: 14,
       ),
       fixedColor: Colors.red,
-      unselectedItemColor: Colors.blueGrey, //使用 fixedColor 改变按钮选中时填充色，unselectedItemColor 改变未选中时的填充色。
-      showSelectedLabels: true,//使用 showSelectedLabels 设置选中时是否显示 title，默认为 true。
-      showUnselectedLabels: false, //使用 showUnselectedLabels 设置选中时是否显示 title，默认为 true。
+      unselectedItemColor: Colors.grey, //使用 fixedColor 改变按钮选中时填充色，unselectedItemColor 改变未选中时的填充色。
+      // showSelectedLabels: true,//使用 showSelectedLabels 设置选中时是否显示 title，默认为 true。
+      // showUnselectedLabels: false, //使用 showUnselectedLabels 设置选中时是否显示 title，默认为 true。
       selectedIconTheme: IconThemeData(
         color: Colors.black,
         size: 24,

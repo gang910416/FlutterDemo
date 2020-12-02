@@ -36,14 +36,13 @@ class RowAndColum extends StatelessWidget {
           width: 80,
           height: 80,
           color: Colors.orange,
-          child: Text("测试",style: TextStyle(fontSize:  10),),
+          child: Text("de测试",style: TextStyle(fontSize:  10),),
         ),
         Container(
           width: 80,
           height: 80,
           color: Colors.red,
           child: Text("测试",style: TextStyle(fontSize:  20),),
-
         ),
         Container(
           width: 80,
@@ -66,7 +65,7 @@ class RowAndColum extends StatelessWidget {
           // margin: const EdgeInsets.all(30),
           width: 80,
           height: 80,
-          color: Colors.blueAccent,
+          color: Colors.indigo[500],
           child:Image.asset('images/pic1.jpg'),
         ),
         Container(
@@ -78,7 +77,7 @@ class RowAndColum extends StatelessWidget {
         Container(
           width: 80,
           height: 80,
-          color: Colors.greenAccent,
+          color: Colors.indigo[500],
         ),
       ],
     );

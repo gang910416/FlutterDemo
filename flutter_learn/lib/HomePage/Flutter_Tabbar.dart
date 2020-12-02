@@ -100,7 +100,6 @@ TabController controller;
         ),
       );
     });
-    print(tabViewList);
     return tabViewList;
   }
 

@@ -34,7 +34,6 @@ class Flutter_image extends StatelessWidget{
             image: 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2986114791,2667770254&fm=26&gp=0.jpg',
             fit: BoxFit.fill,
         ),
-
       ],
     );
   }
@@ -67,9 +66,7 @@ class Flutter_image extends StatelessWidget{
           color: Colors.greenAccent,
           child: Image.asset('images/pic3.jpg',fit: BoxFit.fill,),
         ),
-
       ],
-
     );
   }
 }
