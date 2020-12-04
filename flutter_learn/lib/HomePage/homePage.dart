@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_learn/HomePage/Flutter_AlertView.dart';
+import 'package:flutter_learn/HomePage/Flutter_CupertinoTabr.dart';
 import 'package:flutter_learn/HomePage/Flutter_DataTable.dart';
 import 'package:flutter_learn/HomePage/Flutter_DatePicker.dart';
 import 'package:flutter_learn/HomePage/Flutter_InputDecoration.dart';
@@ -100,7 +101,7 @@ class _MyListViewState extends State<MyHomePage>{
     funcLists.add({"name": "BottomSheet", "action": "/BaseWidgets/Row", "desc": "Flutter 组件之 BottomSheet 详解"});
     funcLists.add({"name": "Tooltip", "action": "/BaseWidgets/Row", "desc": "Flutter 组件之 Tooltip 详解"});
     funcLists.add({"name": "DataTable", "action": "/BaseWidgets/Row", "desc": "Flutter 组件之 DataTable 详解"});
-    funcLists.add({"name": "辅助功能", "action": "/BaseWidgets/Row", "desc": "给你的App添加辅助功能(这是一个正在进行的工作)。"});
+    funcLists.add({"name": "CupertinoTabBar", "action": "/BaseWidgets/Row", "desc": "给你的App添加辅助功能(这是一个正在进行的工作)。"});
     setState(() {
       // 调用父类方法，会刷新页面
     });
@@ -169,6 +170,8 @@ class _MyListViewState extends State<MyHomePage>{
                             return FMToolTipVC();
                           }else if(func["name"] == "DataTable"){
                             return FMDataTableVC();
+                          }else if(func["name"] == "CupertinoTabBar"){
+                            return FMCupertionTabbar();
                           }
                         },
                         ),

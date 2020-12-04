@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_learn/HomePage/homePage.dart';
 import 'FMRouteManager.dart';
+import 'package:flutter_learn/WeChet/FMHome.dart';
 void main() {
   runApp(MyFlutter());
 }
@@ -13,13 +14,13 @@ class MyFlutter extends StatelessWidget{
     // TODO: implement build
     return MaterialApp(
       title: 'Flutter App',
-      initialRoute: '/',
-      onGenerateRoute: (setting){
-        return manager.routeWithSetting(setting);
-      },
-      onUnknownRoute: (setting){
-        return manager.unknowRouteWithSetting(setting);
-      },
+      // initialRoute: '/',
+      // onGenerateRoute: (setting){
+      //   return manager.routeWithSetting(setting);
+      // },
+      // onUnknownRoute: (setting){
+      //   return manager.unknowRouteWithSetting(setting);
+      // },
 
       theme: ThemeData(
         primarySwatch: Colors.blue,
