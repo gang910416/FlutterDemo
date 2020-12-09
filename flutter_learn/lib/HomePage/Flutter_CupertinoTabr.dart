@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_learn/HomePage/ChildPage/home.dart';
-import 'package:flutter_learn/HomePage/ChildPage/friendtrip.dart';
-import 'package:flutter_learn/HomePage/ChildPage/contact.dart';
-import 'package:flutter_learn/HomePage/ChildPage/personCenter.dart';
+import 'package:flutter_learn/WeChet/Pages/FMChat.dart';
+import 'package:flutter_learn/WeChet/Pages/FMFind.dart';
+import 'package:flutter_learn/WeChet/Pages/FMMine.dart';
+import 'package:flutter_learn/WeChet/Pages/FMMail.dart';
 
 class FMCupertionTabbar extends StatefulWidget{
   CupertionTabbar createState() => CupertionTabbar();
@@ -24,21 +24,21 @@ class CupertionTabbar extends State<FMCupertionTabbar>{
       tabBuilder: (context,index){
         return CupertinoTabView(
           routes: {
-            '/childPage/home':(context) => FMChildHomeVC(),
-            '/childPage/Contact':(context) => FMChildContactVC(),
-            '/childPage/friend':(context) => FMChildFriendVC(),
-            '/childPage/me':(context) => FMChildMeVC(),
+            '/childPage/home':(context) => FMChat(),
+            '/childPage/Contact':(context) => FMMailList(),
+            '/childPage/friend':(context) => FMFind(),
+            '/childPage/me':(context) => FMMine(),
           },
           builder: (context){
             switch(index){
               case 0:
-                return FMChildHomeVC();
+                return FMChat();
               case 1:
-                return FMChildContactVC();
+                return FMMailList();
               case 2:
-                return FMChildFriendVC();
+                return FMMailList();
               case 3:
-                return FMChildMeVC();
+                return FMMine();
               default :
                 return Container();
             }
