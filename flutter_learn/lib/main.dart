@@ -27,6 +27,7 @@ class MyFlutter extends StatelessWidget{
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: MyHomePage(),
+      // home:WCHomeVC(),
       // home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }

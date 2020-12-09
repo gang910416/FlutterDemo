@@ -1,3 +1,5 @@
+import 'dart:js';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -14,10 +16,9 @@ class FMChildFriend extends State<FMChildFriendVC>{
     // TODO: implement build
     return CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
-        middle: Text("朋友圈"),
+        middle: Text("朋友圈1"),
       ),
-      child: Center(),
+
     );
   }
 }
-

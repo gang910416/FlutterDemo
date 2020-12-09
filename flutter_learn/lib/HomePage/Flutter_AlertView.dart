@@ -92,6 +92,7 @@ class AlertViewFunc extends State<FLutterAlert>{
         child: Column(
           children: [
             Padding(padding: EdgeInsets.all(15)),
+            Icon(Icons.ac_unit),
             Text("简单的AlertDialog, 也可以自定义样式"),
           ],
         ),
@@ -100,7 +101,6 @@ class AlertViewFunc extends State<FLutterAlert>{
       actionsPadding: EdgeInsets.all(15),
       //事件子控件
       actions: [
-
         FlatButton(onPressed: (){
           Navigator.pop(context,'');
         }, child: Text("取消")),
@@ -130,7 +130,6 @@ RaisedButton _showCupertionDialog(context ,title ,dialog){
           });
       },
       child: Text("$title"),
-      
     );
 }
 
